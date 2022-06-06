@@ -4,24 +4,6 @@ import (
 	"time"
 )
 
-// func main() {
-// 	cache := NewCache()
-// 	fmt.Println(cache.Keys())
-// 	cache.Put("somekey1", "someval1")
-// 	cache.Put("somekey2", "someval2")
-// 	fmt.Println(cache.Keys())
-// 	fmt.Println(cache.Get("somekey2"))
-// 	tthen := time.Now().Add(7 * time.Second)
-// 	fmt.Println(cache.Keys())
-// 	cache.PutTill("somekey3", "someval3", tthen)
-// 	fmt.Println(cache.Keys())
-// 	time.Sleep(2 * time.Second)
-// 	fmt.Println(cache.Keys())
-// 	fmt.Println(cache.Get("somekey2"))
-// 	time.Sleep(7 * time.Second)
-// 	fmt.Println(cache.Keys())
-// }
-
 type Cache struct {
 	kvs       map[string]string
 	deadlines map[string]time.Time
